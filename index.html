@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FMK Cheat Sheet | Zaži deň na FMK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fmk: {
+              magenta: '#ec008c',
+              magentaDark: '#cf1382',
+              magentaLight: '#ffc3e6',
+              coal: '#3d3935',
+              coalLight: '#f5f4f4',
+            }
+          }
+        }
+      }
+    }
+
+  </script>
+  <style>
+    @font-face { font-family: "UCM Sans"; src: url("fonts/UCMSans-Thin.otf") format("opentype"); font-weight: 100; font-style: normal; font-display: swap; }
+    @font-face { font-family: "UCM Sans"; src: url("fonts/UCMSans-Light.otf") format("opentype"); font-weight: 300; font-style: normal; font-display: swap; }
+    @font-face { font-family: "UCM Sans"; src: url("fonts/UCMSans-Book.otf") format("opentype"); font-weight: 350; font-style: normal; font-display: swap; }
+    @font-face { font-family: "UCM Sans"; src: url("fonts/UCMSans-Regular.otf") format("opentype"); font-weight: 400; font-style: normal; font-display: swap; }
+    @font-face { font-family: "UCM Sans"; src: url("fonts/UCMSans-Medium.otf") format("opentype"); font-weight: 500; font-style: normal; font-display: swap; }
+    @font-face { font-family: "UCM Sans"; src: url("fonts/UCMSans-DemiBold.otf") format("opentype"); font-weight: 600; font-style: normal; font-display: swap; }
+    @font-face { font-family: "UCM Sans"; src: url("fonts/UCMSans-Bold.otf") format("opentype"); font-weight: 700; font-style: normal; font-display: swap; }
+    @font-face { font-family: "UCM Sans"; src: url("fonts/UCMSans-Black.otf") format("opentype"); font-weight: 800; font-style: normal; font-display: swap; }
+    @font-face { font-family: "UCM Sans"; src: url("fonts/UCMSans-Black.otf") format("opentype"); font-weight: 900; font-style: normal; font-display: swap; }
+    html, body, button, input, select, textarea { font-family: "UCM Sans", sans-serif; }
+    body {
+      font-family: "UCM Sans", sans-serif;
+      color: #3d3935;
+      background-color: #fbf9fa;
+    }
+    .quiz-question {
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: 0.01ms !important; }
+    }
+    .arrow-icon {
+      transition: transform 0.3s ease;
+    }
+    .arrow-icon.open {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-fmk-coal antialiased">
+
+  <!-- Header Section -->
+  <header class="bg-fmk-coal text-white py-10 px-4 text-center border-b-4 border-fmk-magenta relative overflow-hidden">
+    <div class="max-w-3xl mx-auto relative z-10">
+      <div aria-hidden="true" class="absolute left-1/2 top-0 -translate-x-1/2 w-72 h-72 rounded-full bg-fmk-magenta opacity-10 blur-3xl pointer-events-none"></div>
+      <span class="inline-block bg-fmk-magenta text-white text-xs uppercase tracking-widest font-bold py-1 px-3 rounded-full mb-3">
+        Zaži deň na FMK
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-2 bg-gradient-to-r from-white via-pink-200 to-fmk-magenta bg-clip-text text-transparent drop-shadow-sm">FMK CHEAT SHEET</h1>
+      <p class="text-gray-300 text-sm sm:text-base max-w-lg mx-auto">
+        Všetko, čo potrebuješ vedieť o štúdiu na Fakulte masmediálnej komunikácie UCM v Trnave na jednom mieste.
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 py-8 space-y-10">
+
+    <!-- SEKCIA 1: Dôležité termíny & Prijímačky -->
+    <section id="section-1" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-3 h-8 bg-fmk-magenta rounded-full"></div>
+        <h2 class="text-xl font-bold text-fmk-coal">1. Dôležité termíny & Podmienky prijatia</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-fmk-coalLight p-4 rounded-xl border-l-4 border-fmk-magenta">
+          <p class="text-xs uppercase text-gray-500 font-bold">Termín podania prihlášky na bakalársky stupeň štúdia</p>
+          <p class="text-lg font-bold text-fmk-coal">do 30. apríla 2027</p>
+          <p class="text-xs text-gray-500 mt-1">Podáva sa elektronicky cez e-prihlášku UCM.</p>
+        </div>
+        <div class="bg-fmk-coalLight p-4 rounded-xl border-l-4 border-fmk-coal">
+          <p class="text-xs uppercase text-gray-500 font-bold">Termín prijímacích skúšok</p>
+          <p class="text-lg font-bold text-fmk-coal">Jún 2027</p>
+          <p class="text-xs text-gray-500 mt-1">Presný harmonogram dostaneš pozvánkou.</p>
+        </div>
+      </div>
+
+      <div class="space-y-3 text-sm text-gray-700">
+        <h3 class="font-bold text-fmk-coal text-base">Ako prebiehajú prijímačky?</h3>
+        <ul class="list-disc pl-5 space-y-1 marker:text-fmk-magenta">
+          <li><strong>Od januára 2026 budú uchádzačky a uchádzači o denné štúdium prijímaní na základe výsledkov SCIO testov zo všeobecných študijných predpokladov, ktoré nahradia doterajšie prijímacie skúšky.</strong></li>
+          <li><strong>Špeciálne požiadavky pre Teóriu digitálnych hier a Digitálny dizajn sa dozvieš nižšie.</strong></li>
+          <li><strong>Maturitné výsledky:</strong> Do celkového bodovania sa započítavajú aj výsledky zo strednej školy a maturity.</li>
+        </ul>
+      <div class="mt-6 rounded-xl border border-fmk-magenta/20 bg-fmk-magentaLight/30 p-4">
+        <h3 class="font-bold text-fmk-coal">Dôležité dokumenty</h3>
+        <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700 marker:text-fmk-magenta">
+          <li>notársky overené vysvedčenia</li>
+          <li>životopis</li>
+        </ul>
+      </div>
+      </div>
+    </section>
+
+    <!-- SEKCIA 2: Bakalárske študijné programy -->
+    <section id="section-2-3" class="space-y-4">
+      <div class="flex items-center space-x-3 mb-2">
+        <div class="w-3 h-8 bg-fmk-magenta rounded-full"></div>
+        <div>
+          <h2 class="text-xl font-bold text-fmk-coal">2. Študijné odbory</h2>
+          <p class="text-xs text-gray-500">Klikni na odbor a zisti, čo sa naučíš, aké predmety ťa čakajú a kde sa uplatníš.</p>
+        </div>
+      </div>
+
+      <!-- Bakalárske štúdium Header -->
+      <h3 class="text-xs font-bold uppercase tracking-wider text-fmk-magenta pt-2">Bakalárske študijné programy (Bc.)</h3>
+
+      <!-- Odbor 1: Masmediálna komunikácia -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200 hover:border-fmk-magenta">
+        <button type="button" aria-expanded="false" aria-controls="odbor-1" onclick="toggleAccordion('odbor-1')" class="w-full min-h-14 text-left p-5 flex justify-between items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fmk-magenta">
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-fmk-magenta"></span>
+            <span id="heading-odbor-1" class="font-bold text-lg text-fmk-coal">Masmediálna komunikácia</span>
+          </div>
+          <svg id="arrow-odbor-1" class="arrow-icon w-5 h-5 text-fmk-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="odbor-1" role="region" aria-labelledby="heading-odbor-1" class="accordion-content border-t border-gray-100 bg-gray-50/50">
+          <div class="p-5 space-y-4 text-sm">
+            <p class="rounded-xl bg-fmk-magentaLight/40 px-4 py-3 font-semibold italic text-fmk-coal">„Tvor obsah, ktorý hýbe spoločnosťou, a staň sa hlasom generácie.“</p>
+            <div class="rounded-xl border border-fmk-magenta/20 bg-white p-4">
+              <h4 class="font-bold text-fmk-magenta mb-1">🎯 Ako prebieha prijímacie konanie?</h4>
+              <p class="text-gray-700">Pri prijímacom konaní sa berú do úvahy výsledky zo strednej školy aj výsledky SCIO testov zo všeobecných študijných predpokladov.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-magenta mb-1">Čo sa naučíš?</h4>
+              <p class="text-gray-700">Tvorbu správ, prácu v TV a rozhlase, žurnalistiku, tvorbu obsahu pre sociálne siete, moderovanie a základné pravidlá práce v redakcii a médiách.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Kľúčové predmety:</h4>
+              <p class="text-gray-600">• dejiny mediálnej komunikácie<br>• žurnalistické žánre<br>• autorské právo<br>• etika médií<br>• manažment a redigovanie v médiách</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Uplatnenie absolventov:</h4>
+              <p class="text-gray-600">• redaktor<br>• moderátor<br>• copywriter<br>• hovorca<br>• PR manažér<br>• content creator v médiách alebo agentúrach</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Odbor 2: Marketingová komunikácia -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200 hover:border-fmk-magenta">
+        <button type="button" aria-expanded="false" aria-controls="odbor-2" onclick="toggleAccordion('odbor-2')" class="w-full min-h-14 text-left p-5 flex justify-between items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fmk-magenta">
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-fmk-magenta"></span>
+            <span id="heading-odbor-2" class="font-bold text-lg text-fmk-coal">Marketingová komunikácia</span>
+          </div>
+          <svg id="arrow-odbor-2" class="arrow-icon w-5 h-5 text-fmk-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="odbor-2" role="region" aria-labelledby="heading-odbor-2" class="accordion-content border-t border-gray-100 bg-gray-50/50">
+          <div class="p-5 space-y-4 text-sm">
+            <p class="rounded-xl bg-fmk-magentaLight/40 px-4 py-3 font-semibold italic text-fmk-coal">„Buduj silné značky a ovládni svet reklamy aj sociálnych sietí.“</p>
+            <div class="rounded-xl border border-fmk-magenta/20 bg-white p-4">
+              <h4 class="font-bold text-fmk-magenta mb-1">🎯 Ako prebieha prijímacie konanie?</h4>
+              <p class="text-gray-700">Pri prijímacom konaní sa berú do úvahy výsledky zo strednej školy aj výsledky SCIO testov zo všeobecných študijných predpokladov.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-magenta mb-1">Čo sa naučíš?</h4>
+              <p class="text-gray-700">Ako budovať značky, plánovať reklamné kampane, pracovať so sociálnymi sieťami (Social Media Marketing), spravovať rozpočty a analyzovať trh.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Kľúčové predmety:</h4>
+              <p class="text-gray-600">• teória masovej komunikácie<br>• propedeutika mediálnych štúdií<br>• psychologické a sociokultúrne aspekty trhu<br>• marketingové stratégie<br>• digitálny marketing</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Uplatnenie absolventov:</h4>
+              <p class="text-gray-600">• marketingový špecialista<br>• account manager<br>• social media specialist<br>• brand manager<br>• PPC špecialista</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Odbor 3: Teória digitálnych hier -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200 hover:border-fmk-magenta">
+        <button type="button" aria-expanded="false" aria-controls="odbor-3" onclick="toggleAccordion('odbor-3')" class="w-full min-h-14 text-left p-5 flex justify-between items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fmk-magenta">
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-fmk-magenta"></span>
+            <span id="heading-odbor-3" class="font-bold text-lg text-fmk-coal">Teória digitálnych hier</span>
+          </div>
+          <svg id="arrow-odbor-3" class="arrow-icon w-5 h-5 text-fmk-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="odbor-3" role="region" aria-labelledby="heading-odbor-3" class="accordion-content border-t border-gray-100 bg-gray-50/50">
+          <div class="p-5 space-y-4 text-sm">
+            <p class="rounded-xl bg-fmk-magentaLight/40 px-4 py-3 font-semibold italic text-fmk-coal">„Hraj hry, ale hlavne ich tvor. Objav dizajn a zákulisie herného sveta.“</p>
+            <div class="rounded-xl border border-fmk-magenta/20 bg-white p-4">
+              <h4 class="font-bold text-fmk-magenta mb-1">🎯 Ako prebieha prijímacie konanie?</h4>
+              <p class="text-gray-700">Posudzujú sa výsledky zo SCIO testov a uchádzač/ka absolvuje ústny pohovor.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-magenta mb-1">Čo sa naučíš?</h4>
+              <p class="text-gray-700">Game design, vývoj hier, tvorbu príbehov (narrative design), testovanie hier, e-šport a hernú kritiku.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Kľúčové predmety:</h4>
+              <p class="text-gray-600">• hry v dejinách kultúr<br>• naratívny dizajn<br>• vývojové nástroje<br>• herné mechaniky<br>• etika nových médií</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Uplatnenie absolventov:</h4>
+              <p class="text-gray-600">• game designer<br>• level designer<br>• narrative designer<br>• game QA tester<br>• herný novinár / streamer<br>• PR pre herné štúdiá</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Odbor 5: Digitálny dizajn -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200 hover:border-fmk-magenta">
+        <button type="button" aria-expanded="false" aria-controls="odbor-5" onclick="toggleAccordion('odbor-5')" class="w-full min-h-14 text-left p-5 flex justify-between items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fmk-magenta">
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-fmk-magenta"></span>
+            <span id="heading-odbor-5" class="font-bold text-lg text-fmk-coal">Digitálny dizajn</span>
+          </div>
+          <svg id="arrow-odbor-5" class="arrow-icon w-5 h-5 text-fmk-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="odbor-5" role="region" aria-labelledby="heading-odbor-5" class="accordion-content border-t border-gray-100 bg-gray-50/50">
+          <div class="p-5 space-y-4 text-sm">
+            <p class="rounded-xl bg-fmk-magentaLight/40 px-4 py-3 font-semibold italic text-fmk-coal">„Vdýchni nápadom vizuálnu podobu. Tvor weby, aplikácie aj identitu značiek.“</p>
+            <div class="rounded-xl border border-fmk-magenta/20 bg-white p-4">
+              <h4 class="font-bold text-fmk-magenta mb-1">🎯 Ako prebieha prijímacie konanie?</h4>
+              <p class="text-gray-700">Prijímacia skúška sa nekoná. Uchádzači a uchádzačky sa prijímajú podľa poradia, v ktorom prospech zo strednej školy tvorí 50 % a portfólio 50 % výsledku.</p>
+              <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-700 marker:text-fmk-magenta">
+                <li>Prospech sa počíta zo známok z profilových predmetov na koncoročných vysvedčeniach a z maturitného vysvedčenia.</li>
+                <li>Portfólio obsahuje najviac tri samostatné grafické práce vo formáte PDF; spoluautorské práce sa neakceptujú. Môže ísť napríklad o vizuálnu identitu, typografiu, plagát, návrh webu alebo aplikácie, animáciu či 3D grafiku.</li>
+                <li>Formulár na nahratie portfólia príde na e-mail z prihlášky spravidla do 3 pracovných dní od jej prijatia. Portfólio hodnotí komisia a výsledok prijímacieho konania fakulta oznámi oficiálnym listom.</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-magenta mb-1">Čo sa naučíš?</h4>
+              <p class="text-gray-700">Grafické nástroje (Adobe Creative Cloud), UI/UX dizajn webov a aplikácií, 3D modelovanie, animáciu a vizuálnu identitu brandov.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Kľúčové predmety:</h4>
+              <p class="text-gray-600">• grafický dizajn<br>• UI/UX dizajn<br>• motion dizajn<br>• brand building a identita značky<br>• vizuálna komunikácia</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Uplatnenie absolventov:</h4>
+              <p class="text-gray-600">• graphic designer<br>• UI/UX designer<br>• art director<br>• motion designer<br>• webdesigner</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Odbor 6: Public Relations -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200 hover:border-fmk-magenta">
+        <button type="button" aria-expanded="false" aria-controls="odbor-6" onclick="toggleAccordion('odbor-6')" class="w-full min-h-14 text-left p-5 flex justify-between items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fmk-magenta">
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-fmk-magenta"></span>
+            <span id="heading-odbor-6" class="font-bold text-lg text-fmk-coal">Public Relations</span>
+          </div>
+          <svg id="arrow-odbor-6" class="arrow-icon w-5 h-5 text-fmk-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="odbor-6" role="region" aria-labelledby="heading-odbor-6" class="accordion-content border-t border-gray-100 bg-gray-50/50">
+          <div class="p-5 space-y-4 text-sm">
+            <p class="rounded-xl bg-fmk-magentaLight/40 px-4 py-3 font-semibold italic text-fmk-coal">„Buduj reputáciu, zvládaj krízovú komunikáciu a prepájaj ľudí.“</p>
+            <div class="rounded-xl border border-fmk-magenta/20 bg-white p-4">
+              <h4 class="font-bold text-fmk-magenta mb-1">🎯 Ako prebieha prijímacie konanie?</h4>
+              <p class="text-gray-700">⚠️ <strong>DÔLEŽITÉ:</strong> Výučba prebieha v anglickom jazyku. Prijímacie konanie prebieha posúdením študijných výsledkov zo strednej školy (vysvedčenie).</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-magenta mb-1">Čo sa naučíš?</h4>
+              <p class="text-gray-700">Riadenie reputácie firiem a osobností, krízovú komunikáciu, organizáciu tlačových konferencií, media relations a influencer marketing.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Kľúčové predmety:</h4>
+              <p class="text-gray-600">• online PR<br>• public relations<br>• branding v PR</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Uplatnenie absolventov:</h4>
+              <p class="text-gray-600">• PR specialist / manager<br>• hovorca<br>• špecialista na krízovú komunikáciu<br>• event manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Odbor 7: Psychológia reklamy a spotrebiteľa -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200 hover:border-fmk-magenta">
+        <button type="button" aria-expanded="false" aria-controls="odbor-7" onclick="toggleAccordion('odbor-7')" class="w-full min-h-14 text-left p-5 flex justify-between items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fmk-magenta">
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-fmk-magenta"></span>
+            <span id="heading-odbor-7" class="font-bold text-lg text-fmk-coal">Psychológia reklamy a spotrebiteľa</span>
+          </div>
+          <svg id="arrow-odbor-7" class="arrow-icon w-5 h-5 text-fmk-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="odbor-7" role="region" aria-labelledby="heading-odbor-7" class="accordion-content border-t border-gray-100 bg-gray-50/50">
+          <div class="p-5 space-y-4 text-sm">
+            <p class="rounded-xl bg-fmk-magentaLight/40 px-4 py-3 font-semibold italic text-fmk-coal">„Zisti, čo ľudia chcú, a nazri do mysle zákazníka.“</p>
+            <div class="rounded-xl border border-fmk-magenta/20 bg-white p-4">
+              <h4 class="font-bold text-fmk-magenta mb-1">🎯 Ako prebieha prijímacie konanie?</h4>
+              <p class="text-gray-700">Posudzujú sa študijné výsledky zo strednej školy a výsledky maturitnej skúšky.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-magenta mb-1">Čo sa naučíš?</h4>
+              <p class="text-gray-700">Ako ľudia vnímajú reklamu, čo ovplyvňuje nákupné rozhodnutia, neuromarketing, prácu s dátami a behaviorálny výskum.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Kľúčové predmety:</h4>
+              <p class="text-gray-600">• sociálna psychológia<br>• marketingová komunikácia<br>• dátová analýza<br>• techniky predaja<br>• spotrebiteľské správanie</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Uplatnenie absolventov:</h4>
+              <p class="text-gray-600">• consumer insights researcher<br>• data analyst v marketingu</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Odbor 8: Digitálna komunikácia a zodpovednosť -->
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden transition-all duration-200 hover:border-fmk-magenta">
+        <button type="button" aria-expanded="false" aria-controls="odbor-8" onclick="toggleAccordion('odbor-8')" class="w-full min-h-14 text-left p-5 flex justify-between items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-fmk-magenta">
+          <div class="flex items-center space-x-3">
+            <span class="w-2.5 h-2.5 rounded-full bg-fmk-magenta"></span>
+            <span id="heading-odbor-8" class="font-bold text-lg text-fmk-coal">Digitálna komunikácia a zodpovednosť</span>
+          </div>
+          <svg id="arrow-odbor-8" class="arrow-icon w-5 h-5 text-fmk-magenta" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+        <div id="odbor-8" role="region" aria-labelledby="heading-odbor-8" class="accordion-content border-t border-gray-100 bg-gray-50/50">
+          <div class="p-5 space-y-4 text-sm">
+            <p class="rounded-xl bg-fmk-magentaLight/40 px-4 py-3 font-semibold italic text-fmk-coal">„Ovládni digitálny svet a pomáhaj mu fungovať bezpečnejšie a zodpovednejšie.“</p>
+            <div class="rounded-xl border border-fmk-magenta/20 bg-white p-4">
+              <h4 class="font-bold text-fmk-magenta mb-1">🎯 Ako prebieha prijímacie konanie?</h4>
+              <p class="text-gray-700">Prijímacie konanie prebieha posúdením výsledkov zo stredoškolského štúdia a maturitnej skúšky.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-magenta mb-1">Čo sa naučíš?</h4>
+              <p class="text-gray-700">Etiku v online priestore, boj proti dezinformáciám, udržateľnú komunikáciu a spoločenskú zodpovednosť a bezpečné fungovanie značiek v digitálnom svete.</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Kľúčové predmety:</h4>
+              <p class="text-gray-600">• AI gramotnosť<br>• sociálne siete a ich manažment<br>• postfaktická spoločnosť<br>• digitálne komunikačné stratégie<br>• dezinformácie a fact-checking</p>
+            </div>
+            <div>
+              <h4 class="font-bold text-fmk-coal mb-1">Uplatnenie absolventov:</h4>
+              <p class="text-gray-600">• CSR manažér<br>• fact-checker<br>• špecialista na digitálnu bezpečnosť a etiku komunikácie firiem</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <section id="fmk-quiz" class="rounded-2xl border-2 border-fmk-magenta/20 bg-fmk-magentaLight/30 p-5 shadow-sm sm:p-7" aria-labelledby="quiz-title">
+        <div class="mb-6">
+          <span class="inline-flex rounded-full bg-fmk-magenta px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">Mini kvíz ✨</span>
+          <h3 id="quiz-title" class="mt-3 text-2xl font-extrabold text-fmk-coal sm:text-3xl">Ktorý odbor na FMK je pre teba ten pravý?</h3>
+          <p class="mt-2 text-sm text-gray-700">Vyber pri každej z piatich otázok jednu možnosť. Na konci zistíš, ktoré odbory najviac sedia k tvojim odpovediam.</p>
+        </div>
+        <form id="fmk-quiz-form" class="space-y-5">
+          <fieldset id="quiz-question-1" aria-labelledby="quiz-question-1-title" class="quiz-question min-w-0 space-y-3 rounded-xl border border-fmk-magenta/15 bg-white p-4 shadow-sm sm:p-5">
+            <div id="quiz-question-1-title" class="quiz-question-title mb-3 w-full min-w-0 text-base font-bold text-fmk-coal">1. Tvoj kamarát dostal nápad, že začne predávať „čistý vzduch v plechovke“ za 20€. Čo urobíš?</div>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q1" value="marketing" required><span><strong>A)</strong> Okamžite mu spravím promo video a otestujem, či to na TikToku niekto kúpi.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q1" value="media"><span><strong>B)</strong> Začnem písať články o tom, aký je to marketingový podvod storočia.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q1" value="design"><span><strong>C)</strong> Navrhnem mu, že prepracujem dizajn tej plechovky, aby aspoň vyzerala esteticky a človek nemal pocit, že kúpil odpad.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q1" value="psychology"><span><strong>D)</strong> Zistím, aký typ ľudí je schopný za toto zaplatiť.</span></label>
+          </fieldset>
+          <fieldset id="quiz-question-2" aria-labelledby="quiz-question-2-title" class="quiz-question min-w-0 space-y-3 rounded-xl border border-fmk-magenta/15 bg-white p-4 shadow-sm sm:p-5">
+            <div id="quiz-question-2-title" class="quiz-question-title mb-3 w-full min-w-0 text-base font-bold text-fmk-coal">2. Kúpil/a si si novú appku, ale po 5 minútach zistíš, že ovládanie je totálna katastrofa. Čo urobíš ako prvé?</div>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q2" value="design" required><span><strong>A)</strong> Napíšem im detailnú recenziu, prečo mi to nevyhovuje.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q2" value="games"><span><strong>B)</strong> Začnem v hlave vymýšľať, ako to spraviť o 100-krát lepšie.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q2" value="pr"><span><strong>C)</strong> Pozriem sa na to, aká katastrofa z toho bude, keď to zrecenzujú influenceri.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q2" value="psychology"><span><strong>D)</strong> Budem hľadať, prečo som si vôbec stiahol/la túto aplikáciu.</span></label>
+          </fieldset>
+          <fieldset id="quiz-question-3" aria-labelledby="quiz-question-3-title" class="quiz-question min-w-0 space-y-3 rounded-xl border border-fmk-magenta/15 bg-white p-4 shadow-sm sm:p-5">
+            <div id="quiz-question-3-title" class="quiz-question-title mb-3 w-full min-w-0 text-base font-bold text-fmk-coal">3. Kamošovi v triede sa podarilo spraviť totálnu hanbu pred celou školou. Čo spravíš?</div>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q3" value="media" required><span><strong>A)</strong> Využijem to na vytvorenie najlepšieho školského memu.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q3" value="pr"><span><strong>B)</strong> Poradím mu, ako z toho vykorčuľovať s čistým štíonn a zachrániť si reputáciu.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q3" value="psychology"><span><strong>C)</strong> Budem analyzovať prečo sa na tom všetci smejú a aký to má dopad na jeho ego.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q3" value="digital"><span><strong>D)</strong> Začnem rozmýšľať kto si to natočil a akú to bude mať digitálnu stopu.</span></label>
+          </fieldset>
+          <fieldset id="quiz-question-4" aria-labelledby="quiz-question-4-title" class="quiz-question min-w-0 space-y-3 rounded-xl border border-fmk-magenta/15 bg-white p-4 shadow-sm sm:p-5">
+            <div id="quiz-question-4-title" class="quiz-question-title mb-3 w-full min-w-0 text-base font-bold text-fmk-coal">4. Čo ťa na internete vytáča najviac zo všetkého?</div>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q4" value="design" required><span><strong>A)</strong> Keď vidím AI slop.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q4" value="marketing,psychology"><span><strong>B)</strong> Keď influencer odporúča totálny odpad len preto, že mu za to zaplatili.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q4" value="digital"><span><strong>C)</strong> Keď sa neoverená hlúposť šíri a ľudia tomu bezhlavo veria.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q4" value="media"><span><strong>D)</strong> Keď v správach alebo médiách úplne prekrútia informácie a vynechajú dôležitý kontext.</span></label>
+          </fieldset>
+          <fieldset id="quiz-question-5" aria-labelledby="quiz-question-5-title" class="quiz-question min-w-0 space-y-3 rounded-xl border border-fmk-magenta/15 bg-white p-4 shadow-sm sm:p-5">
+            <div id="quiz-question-5-title" class="quiz-question-title mb-3 w-full min-w-0 text-base font-bold text-fmk-coal">5. Na škole chystáte festival a treba vymyslieť, ako ho dostať medzi ľudí. Čo by si si vybral/a?</div>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q5" value="marketing" required><span><strong>A)</strong> Vytvorím kampaň a vymyslím, ako prilákať čo najviac návštevníkov.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q5" value="media"><span><strong>B)</strong> Napíšem reportáž a zachytím príbehy ľudí, ktorí festival pripravujú.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q5" value="design"><span><strong>C)</strong> Navrhnem plagát, vizuálnu identitu a prehľadný web s programom.</span></label>
+            <label class="flex cursor-pointer items-start gap-3 rounded-lg border border-gray-100 p-3 transition hover:border-fmk-magenta"><input class="mt-1 accent-fmk-magenta" type="radio" name="q5" value="digital"><span><strong>D)</strong> Overím informácie o podujatí a postarám sa, aby sa online šírili bezpečne a zodpovedne.</span></label>
+          </fieldset>
+        </form>
+        <div id="quiz-results" class="mt-6 hidden rounded-2xl bg-white p-5 shadow-md sm:p-6" aria-live="polite" aria-atomic="true">
+          <h4 class="text-xl font-extrabold text-fmk-coal">Tvoje výsledky 🎉</h4>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl bg-fmk-magenta p-4 text-white"><p class="text-xs font-bold uppercase tracking-wide">🏆 TOP odbor pre teba</p><p id="quiz-top-name" class="mt-1 text-lg font-extrabold"></p><p id="quiz-top-match" class="text-sm font-semibold"></p></div>
+            <div class="rounded-xl bg-fmk-magentaLight/50 p-4 text-fmk-coal"><p class="text-xs font-bold uppercase tracking-wide">🥈 Druhá skvelá možnosť</p><p id="quiz-second-name" class="mt-1 text-lg font-extrabold"></p><p id="quiz-second-match" class="text-sm font-semibold"></p></div>
+          </div>
+          <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+            <button id="quiz-winner-button" type="button" class="min-h-12 flex-1 rounded-xl bg-fmk-coal px-5 py-3 font-bold text-white transition hover:bg-fmk-magenta focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fmk-magenta">Zobraziť môj víťazný odbor</button>
+            <button id="quiz-reset-button" type="button" class="min-h-12 rounded-xl border-2 border-fmk-magenta px-5 py-3 font-bold text-fmk-magenta transition hover:bg-fmk-magenta hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fmk-magenta">Vyplniť znova</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- SEKCIA 3: Prečo FMK -->
+    <section id="section-3" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-3 h-8 bg-fmk-magenta rounded-full"></div>
+        <h2 class="text-xl font-bold text-fmk-coal">3. Prečo FMK</h2>
+      </div>
+
+      <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4" role="region" aria-label="Život a prax na FMK" tabindex="0">
+        <div class="shrink-0 w-[82%] sm:w-[48%] snap-start p-4 bg-gray-50 rounded-xl border border-gray-100">
+          <h3 class="font-bold text-fmk-magenta mb-1">Prax už počas školy</h3>
+          <p class="text-xs text-gray-600">Pracuj v reálnych fakultných médiách: Rádio Aetter, časopis Atteliér alebo herné kabinety TEDI Games.</p>
+        </div>
+        <div class="shrink-0 w-[82%] sm:w-[48%] snap-start p-4 bg-gray-50 rounded-xl border border-gray-100">
+          <h3 class="font-bold text-fmk-magenta mb-1">Skvelá komunitná atmosféra</h3>
+          <p class="text-xs text-gray-600">FMK žije podujatiami: Beánie FMK, Imatrikulácie, Design Talks a Týždeň vedy a techniky.</p>
+        </div>
+        <div class="shrink-0 w-[82%] sm:w-[48%] snap-start p-4 bg-gray-50 rounded-xl border border-gray-100">
+          <h3 class="font-bold text-fmk-magenta mb-1">Špičkové vybavenie</h3>
+          <p class="text-xs text-gray-600">Moderné foto a tv štúdiá, strihateľne, podcastové štúdio a Apple laby priamo v budove na Skladovej.</p>
+        </div>
+        <div class="shrink-0 w-[82%] sm:w-[48%] snap-start p-4 bg-gray-50 rounded-xl border border-gray-100">
+          <h3 class="font-bold text-fmk-magenta mb-1">Erasmus+ výmenné pobyty</h3>
+          <p class="text-xs text-gray-600">Vycestuj na semester alebo rok do Španielska, Portugalska, Nemecka či iných krajín Európy.</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h3 class="text-lg font-bold text-fmk-coal mb-3">Kde sa učíme? 🏫</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <article class="rounded-xl border border-fmk-magenta/20 bg-fmk-magentaLight/30 p-4"><h4 class="font-bold text-fmk-magenta">📍 Herdu</h4><p class="mt-1 text-sm text-gray-700">Hlavná budova so študijným oddelením.</p></article>
+          <article class="rounded-xl border border-fmk-magenta/20 bg-fmk-magentaLight/30 p-4"><h4 class="font-bold text-fmk-magenta">📍 V jame</h4><p class="mt-1 text-sm text-gray-700">Prednáškové miestnosti a učebne.</p></article>
+          <article class="rounded-xl border border-fmk-magenta/20 bg-fmk-magentaLight/30 p-4"><h4 class="font-bold text-fmk-magenta">📍 Skladová</h4><p class="mt-1 text-sm text-gray-700">Prednáškové sály a odborné učebne, herné ateliéry a ateliéry.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCIA 4: Poplatky a školné -->
+    <section id="section-4" class="bg-fmk-magentaLight/30 p-6 rounded-2xl border-2 border-fmk-magenta/20 shadow-sm relative overflow-hidden">
+      <div class="flex items-center space-x-3 mb-4">
+        <div class="w-3 h-8 bg-fmk-magenta rounded-full"></div>
+        <h2 class="text-xl font-bold text-fmk-coal">4. Poplatky & Školné</h2>
+      </div>
+
+      <div class="space-y-4 text-sm">
+        <div class="bg-white p-4 rounded-xl shadow-xs border border-fmk-magenta/10">
+          <div class="flex justify-between items-center mb-1">
+            <span class="font-bold text-fmk-coal">Denné štúdium (Bc. & Mgr.)</span>
+            <span class="font-extrabold text-fmk-magenta text-base">BEZPLATNÉ</span>
+          </div>
+          <p class="text-xs text-gray-500">V štandardnej dĺžke štúdia (3 roky Bc., 2 roky Mgr.) je štúdium plne hradené štátom.</p>
+        </div>
+
+
+        <div class="rounded-xl border-2 border-fmk-magenta bg-white p-4 shadow-sm">
+          <p class="text-xs font-bold uppercase tracking-wide text-fmk-magenta">Študijný program Public Relations</p>
+          <p class="mt-1 text-lg font-extrabold text-fmk-coal">1 000 € / akademický rok</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="bg-white p-4 rounded-xl shadow-xs border border-fmk-magenta/10">
+            <p class="text-xs text-gray-500 font-semibold">Poplatok za prihlášku</p>
+            <p class="font-bold text-fmk-coal text-lg">40 € <span class="text-xs font-normal text-gray-500">(e-prihláška)</span></p>
+          </div>
+          <div class="bg-white p-4 rounded-xl shadow-xs border border-fmk-magenta/10">
+            <p class="text-xs text-gray-500 font-semibold">Externé štúdium</p>
+            <p class="font-bold text-fmk-coal text-lg">podľa cenníka UCM</p>
+            <p class="text-[10px] text-gray-400">Aktualizované pre každý akademický rok na ucm.sk</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEKCIA 5: Kontakty a DOD -->
+    <section id="section-5" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 space-y-6">
+      
+      <!-- DOD Reminder Box (Zvýraznený pod požiadavkou) -->
+      <div class="bg-fmk-magenta text-white p-5 rounded-xl shadow-md flex items-center justify-between flex-wrap gap-3">
+        <div>
+          <span class="bg-white/20 text-white text-[10px] uppercase font-bold tracking-widest px-2.5 py-1 rounded-full">Ulož si dátum!</span>
+          <h3 class="text-xl font-black mt-1">DOD (Deň otvorených dverí)</h3>
+          
+        </div>
+        <div class="bg-white text-fmk-magenta font-black text-lg px-4 py-2 rounded-xl text-center shadow-sm">
+          5. februára 2027
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center space-x-3 mb-4">
+          <div class="w-3 h-8 bg-fmk-magenta rounded-full"></div>
+          <h2 class="text-xl font-bold text-fmk-coal">5. Dôležité kontakty</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div class="p-4 bg-gray-50 rounded-xl">
+            <h4 class="font-bold text-fmk-coal mb-1">Kontakty na fakultu</h4>
+            <p class="text-xs text-gray-600">📍 Adresa: Námestie Jozefa Herdu 2</p>
+            <div class="mt-3 space-y-3 text-xs text-gray-600">
+              <div>
+                <h5 class="font-bold text-fmk-coal">Všeobecné otázky o fakulte – Dekanát FMK</h5>
+                <p>✉️ E-mail: <a href="mailto:info.fmk@ucm.sk" class="text-fmk-magenta underline font-medium">info.fmk@ucm.sk</a></p>
+                <p>📞 Telefón: <a href="tel:0335565424" class="text-fmk-magenta underline font-medium">033 5565 424</a></p>
+              </div>
+              <div>
+                <h5 class="font-bold text-fmk-coal">Prijímacie konanie – Lucia Štoderová</h5>
+                <p>✉️ E-mail: <a href="mailto:lucia.stoderova@ucm.sk" class="text-fmk-magenta underline font-medium">lucia.stoderova@ucm.sk</a></p>
+                <p>📞 Telefón: <a href="tel:+421335565416" class="text-fmk-magenta underline font-medium">+421 33 5565 416</a></p>
+              </div>
+              <div>
+                <h5 class="font-bold text-fmk-coal">Vedenie fakulty – Mgr. Juliána Mináriková, PhD.</h5>
+                <p>✉️ E-mail: <a href="mailto:juliana.minarikova@ucm.sk" class="text-fmk-magenta underline font-medium">juliana.minarikova@ucm.sk</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 bg-gray-50 rounded-xl">
+            <h4 class="font-bold text-fmk-coal mb-1">Sleduj nás & Pýtaj sa</h4>
+            <p class="text-xs text-gray-600">🌐 Web: <a href="https://fmk.sk" target="_blank" rel="noopener noreferrer" class="text-fmk-magenta underline font-medium">fmk.sk</a></p>
+            <p class="text-xs text-gray-600">📸 Instagram: <span class="font-medium text-fmk-coal">@fmk_ucm</span></p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <section class="mx-auto max-w-3xl px-4 pb-8" aria-label="Prihláška na FMK">
+    <a href="https://e-prihlaska.ucm.sk/" class="block rounded-2xl bg-gradient-to-r from-fmk-magenta to-pink-500 px-6 py-5 text-center text-lg font-extrabold text-white shadow-lg transition hover:scale-[1.01] focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-fmk-coal">CHCEM ŠTUDOVAŤ NA FMK 🚀</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-fmk-coal text-gray-400 py-6 text-center text-xs">
+    <p>© 2027 Fakulta masmediálnej komunikácie UCM v Trnave</p>
+    <p class="mt-1 text-gray-500">Vytvorené pre akciu "Zaži deň na FMK"</p>
+  </footer>
+
+  <script>
+    function toggleAccordion(id) {
+      const content = document.getElementById(id);
+      const button = document.querySelector("[aria-controls=\"" + id + "\"]");
+      const arrow = document.getElementById("arrow-" + id);
+      const willOpen = button.getAttribute("aria-expanded") !== "true";
+
+      document.querySelectorAll(".accordion-content").forEach((item) => {
+        item.classList.remove("open");
+        item.style.maxHeight = "0px";
+      });
+      document.querySelectorAll("[aria-controls]").forEach((item) => item.setAttribute("aria-expanded", "false"));
+      document.querySelectorAll(".arrow-icon").forEach((item) => item.classList.remove("open"));
+
+      if (willOpen) {
+        button.setAttribute("aria-expanded", "true");
+        content.classList.add("open");
+        content.style.maxHeight = content.scrollHeight + "px";
+        arrow.classList.add("open");
+      }
+    }
+
+    window.addEventListener("resize", () => {
+      document.querySelectorAll(".accordion-content.open").forEach((content) => {
+        content.style.maxHeight = content.scrollHeight + "px";
+      });
+    });
+    const quizForm = document.getElementById("fmk-quiz-form");
+    const quizPrograms = {
+      media: { name: "Masmediálna komunikácia", card: "odbor-1" },
+      marketing: { name: "Marketingová komunikácia", card: "odbor-2" },
+      games: { name: "Teória digitálnych hier", card: "odbor-3" },
+      design: { name: "Digitálny dizajn", card: "odbor-5" },
+      pr: { name: "Public Relations", card: "odbor-6" },
+      psychology: { name: "Psychológia reklamy a spotrebiteľa", card: "odbor-7" },
+      digital: { name: "Digitálna komunikácia a zodpovednosť", card: "odbor-8" }
+    };
+
+    quizForm.addEventListener("change", () => {
+      const answers = ["q1", "q2", "q3", "q4", "q5"].map((name) => quizForm.querySelector(`input[name="${name}"]:checked`));
+      if (answers.some((answer) => !answer)) return;
+
+      const scores = Object.fromEntries(Object.keys(quizPrograms).map((key) => [key, 0]));
+      let totalPoints = 0;
+      answers.forEach((answer) => {
+        answer.value.split(",").forEach((program) => {
+          scores[program] += 1;
+          totalPoints += 1;
+        });
+      });
+      const ranking = Object.keys(quizPrograms).sort((a, b) => scores[b] - scores[a]);
+      const top = ranking[0];
+      const second = ranking[1];
+      const percent = (score) => Math.round((score / totalPoints) * 100);
+
+      document.getElementById("quiz-top-name").textContent = quizPrograms[top].name;
+      document.getElementById("quiz-top-match").textContent = `${percent(scores[top])}% zhoda`;
+      document.getElementById("quiz-second-name").textContent = quizPrograms[second].name;
+      document.getElementById("quiz-second-match").textContent = `${percent(scores[second])}% zhoda`;
+      document.getElementById("quiz-results").classList.remove("hidden");
+      document.getElementById("quiz-results").scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "nearest" });
+    });
+
+    document.getElementById("quiz-winner-button").addEventListener("click", () => {
+      const winnerName = document.getElementById("quiz-top-name").textContent;
+      const winner = Object.values(quizPrograms).find((program) => program.name === winnerName);
+      if (!winner) return;
+      const button = document.querySelector(`[aria-controls="${winner.card}"]`);
+      if (button.getAttribute("aria-expanded") !== "true") toggleAccordion(winner.card);
+      document.getElementById(winner.card).scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+    });
+
+    document.getElementById("quiz-reset-button").addEventListener("click", () => {
+      quizForm.reset();
+      document.getElementById("quiz-results").classList.add("hidden");
+      quizForm.querySelector('input[name="q1"]').focus();
+    });
+
+  </script>
+</body>
+</html>
